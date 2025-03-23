@@ -1,0 +1,21 @@
+﻿#myLinks
+{
+    padding-left: 30px !important; 
+    padding-right: 30px  !important;
+}
+
+
+/*added by Mariam Nufal on 04,06,2018*/
+
+.MainContentNoSidebar > .SmallRightColumns > .Column.ColLast/*.MainContentNoSidebar > .ColLast:first-child*/
+{
+    display: none;
+}
+.MainContentNoSidebar > .SmallRightColumns > .Column.ColFirst/*.MainContentNoSidebar > .ColLast:first-child*/
+{
+    width:100% !important;
+}
+
+.ChangePassword { float: right; margin: 15px 25px; }
+.ChangePassword li {color: #c0392b;}
+.ar-AE .ChangePassword { float: left; margin: 15px 25px; }

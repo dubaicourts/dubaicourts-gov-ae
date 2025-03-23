@@ -1,0 +1,6 @@
+﻿$('document').ready(function()
+{
+    for (i = 0; i < document.getElementsByTagName('*').length; i++) {
+        document.getElementsByTagName('*')[i].removeAttribute('tabindex');
+    }
+});

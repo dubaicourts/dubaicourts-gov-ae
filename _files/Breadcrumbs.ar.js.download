@@ -1,0 +1,11 @@
+﻿$(document).ready(function() {
+    
+    $('.phone .Breadcrumbs, .minitablet .Breadcrumbs').each(function() {
+    
+        var parent = $(this),
+            num_breadcrumbs = $(this).children('div:visible').length;
+            
+            parent.children('div:visible').eq(num_breadcrumbs-2).prevAll().remove();
+    });
+    
+});

@@ -1,0 +1,42 @@
+// modified by Mohamed Shawky in 26/09/2017 -- added services
+// modified by Mohamed Shawky in 11/10/2017 -- added dark and light theme css
+$(function() {
+        var filterList = {
+            init: function() {
+                $('#portfoliolist').mixItUp({
+                    selectors: {
+                        target: '.portfolio',
+                        filter: '.filter'
+                    },
+                    load: {
+                        filter: '.mostused'
+                    }
+                });
+            }
+        };
+        filterList.init();
+    });
+
+
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 300) {    // If page is scrolled more than 300px
+        $('#top').fadeIn("fast");       
+    } else {
+        $('#top').fadeOut("fast");      
+    }
+});
+$('#top').click(function() {           
+    $('body,html').animate({
+        scrollTop : 0                  
+    }, 500);
+});
+
+/* change color */
+
+$(".change-color1").click(function(){
+    if($(this).find("link").length <= 0)
+        $(this).append('<link rel="stylesheet" type="text/css" media="all" href="/DCWeb_Template/css/dark.css">');
+    else
+        $(this).find("link").remove();
+});

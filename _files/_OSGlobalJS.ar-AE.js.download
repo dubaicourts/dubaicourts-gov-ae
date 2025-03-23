@@ -1,0 +1,55 @@
+﻿/*
+Created by Mariam Nufal on 18,07,2017
+Function to validate a phone number
+It checks whether the input is a number or not, 
+, checks the required number of digits
+and checks the required first digits combinations.
+*/
+function IsPhoneNumber(PhoneNumber) {
+    //modified on 10,12,2017 because they want to enter other countries numbers
+   /* var pattern =/^(?:\+971|00971|0)?(?:50|51|52|55|56|2|3|4|6|7|9)\d{7}$/;
+    return pattern.test(PhoneNumber);*/ 
+    var length=PhoneNumber.length;
+    var pattern = /^\d+$/;
+    var substring=PhoneNumber.substring(0,1);
+    if (substring=="+") 
+    {
+        PhoneNumber=PhoneNumber.substring(1,length-1)
+    }
+    return length>=9 && pattern.test(PhoneNumber);
+}
+function IsMobilePhoneNumber(PhoneNumber) {
+    //modified on 10,12,2017 because they want to enter other countries numbers
+    /*
+    var pattern =/^(?:\+971|00971|0)?(?:50|51|52|55|56)\d{7}$/;
+    return pattern.test(PhoneNumber);*/
+    
+    
+        var length=PhoneNumber.length;
+    var pattern = /^\d+$/;
+    var substring=PhoneNumber.substring(0,1);
+    if (substring=="+") 
+    {
+        PhoneNumber=PhoneNumber.substring(1,length-1)
+    }
+    return length>=10 && pattern.test(PhoneNumber);
+}
+function IsEmailAddress(Email)
+{
+    var AtPosition = Email.indexOf("@");
+    var DotPosition = Email.lastIndexOf(".");
+    return not (AtPosition<1 || DotPosition<AtPosition+2 || DotPosition+2>=Email.length);
+}
+
+/*------------------*/
+
+function disableButton(buttonId)
+{
+    document.getElementById(buttonId).disabled = true;
+}
+
+
+function enableButton(buttonId)
+{
+    document.getElementById(buttonId).disabled = false;
+}

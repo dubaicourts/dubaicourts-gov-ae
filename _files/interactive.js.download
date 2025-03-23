@@ -1,0 +1,108 @@
+const mainHeader = document.querySelector(".dda-main-header");
+const getKeyboardFocusableElements = (element = document) => {
+  return [
+    ...element.querySelectorAll(
+      'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
+    ),
+  ].filter(
+    (el) => !el.hasAttribute("disabled") && !el.getAttribute("aria-hidden")
+  );
+};
+
+var toggleNavVisibility = function (element, visibility) {
+  if (!element.classList.contains("dropdown-container")) {
+    mainHeader.style.zIndex = visibility ? 0 : 2;
+  }
+
+  if(element.classList.contains('dda-side-nav')) {
+    element.closest('#sub-header').classList.toggle('dda-sub-header--normal')
+  }
+}
+
+var toggleVisibility = function (element) {
+  if (!element) return;
+  const isDisplayed = window.getComputedStyle(element).display !== "none";
+  element.style.display = !isDisplayed ? "block" : "none";
+
+  toggleNavVisibility(element, !isDisplayed)
+};
+
+var updateVisibility = function (element, visibility) {
+  if (!element) return;
+  const existingStyle = window.getComputedStyle(element);
+  if (existingStyle.display !== "none") {
+    toggleNavVisibility(element, visibility)
+  }
+  if (existingStyle.display === "none" && !visibility) return;
+  element.style.display = visibility ? "block" : "none";
+};
+
+window.onload = function () {
+
+  const chatBtn = document.getElementById("chatBtn");
+  const chatPopup = document.getElementById("chatPopup");
+  const sideNavCloseBtn = document.getElementById("sideNavCloseBtn");
+  const sideMenu = document.getElementById("side-nav");
+  const mobileLoginBtn = document.getElementById("mobileLoginBtn");
+  const iconMenuBtn = document.querySelector("#iconMenu");
+  const megaBtns = document.querySelectorAll(".mega-dropdown");
+  const mobileSearchBtn = document.getElementById("mobileSearchBtn");
+  const mobileSearchSection = document.getElementById("mobileSearchSection");
+
+  megaBtns.forEach((btn) => {
+    btn.addEventListener("mouseover", (e) => {
+      megaBtns.forEach((mbtn) => {
+        mbtn.classList.remove("active");
+      });
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const isClickInsideChatBtn = chatBtn.contains(target);
+    const isCloseSideNavBtnClicked = sideNavCloseBtn.contains(target);
+    const isMobileLoginClicked = mobileLoginBtn.contains(target);
+    const isMobileSearchClicked = mobileSearchBtn.contains(target);
+
+    if (isCloseSideNavBtnClicked) {
+      toggleVisibility(sideMenu);
+    }
+
+    if (target.classList.contains("mega-dropdown")) {
+      event.preventDefault();
+      applyDropdownAccessibility(
+        target.nextElementSibling,
+        target.classList.toggle("active")
+      );
+    }
+
+    if (isClickInsideChatBtn) {
+      event.preventDefault();
+      toggleVisibility(chatPopup);
+    }
+
+    if (isMobileSearchClicked) {
+      updateVisibility(sideMenu, false);
+      toggleVisibility(mobileSearchSection);
+    }
+  });
+
+  //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  const dropdown = document.getElementsByClassName("dropdown-btn");
+  let i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const dropdownContent = this.nextElementSibling;
+      toggleVisibility(dropdownContent);
+    });
+  }
+
+  if (iconMenuBtn) {
+    iconMenuBtn.addEventListener("click", function () {
+      updateVisibility(mobileSearchSection, false);
+      toggleVisibility(sideMenu);
+    });
+  }
+};

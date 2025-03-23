@@ -1,0 +1,43 @@
+﻿.Filters_Wrapper
+{
+  background-color: #F0F0F0;
+}
+
+
+.phone .responsive-case-search .Button
+{
+    width:100%;
+    display:block;
+    margin-top:10px;
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+.phone .responsive-case-search-select
+{
+    width:100%;
+}
+.tablet .responsive-case-search .Button
+{
+    width:42%;
+    padding:unset !important;
+}
+
+.ar-AE .responsive-case-search-small-input
+{
+    margin-right: 1.96078431372549%;
+    margin-left:0px !important;
+}
+.cellRed
+{
+    background-color: #FF0000;
+
+}
+.MandatoryStar2
+{
+   /* content: "*";*/
+    color: #BF1601;
+    font-size: 12px;
+    font-weight: normal;
+    bottom: 10px;
+    position: relative;
+}

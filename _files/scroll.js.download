@@ -1,0 +1,45 @@
+let prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+    const footer =  document.getElementById("footer");
+    const subHeader =  document.getElementById("sub-header");
+    const loginSection = document.getElementById("loginSection");
+    const accessSection = document.getElementById("accessSection");
+    const entitiesList = document.getElementById("entitiesList");
+    const megaMenu = document.querySelector(".dda-sub-header__mega-menu");
+    const sideMenu = document.getElementById("side-nav");
+    const mobileSearchSection = document.getElementById("mobileSearchSection");
+    const allMegaDropdowns = document.querySelectorAll(".mega-dropdown");
+
+    if (prevScrollpos >= currentScrollPos) {
+      if(subHeader.classList.contains('dda-sub-header--hidden')) {
+        subHeader.classList.remove('dda-sub-header--hidden');
+      }
+      if(footer.classList.contains('dda-footer--hidden')) {
+        footer.classList.remove('dda-footer--hidden');
+      }
+      try {
+          megaMenu.classList.remove('d-none')
+      } catch (error) {}
+    } else {
+      if(!subHeader.classList.contains('dda-sub-header--hidden')) {
+        subHeader.classList.add('dda-sub-header--hidden');
+      }
+      if(!footer.classList.contains('dda-footer--hidden')) {
+        footer.classList.add('dda-footer--hidden');
+      }
+      try {
+          megaMenu.classList.add('d-none')
+      } catch (error) {}
+      updateVisibility(loginSection, false);
+      updateVisibility(accessSection, false);
+      updateVisibility(entitiesList, false);
+      updateVisibility(sideMenu, false);
+      updateVisibility(mobileSearchSection, false);
+      allMegaDropdowns.forEach((dropdown) => {
+        dropdown.classList.remove('active');
+      })
+    }
+    prevScrollpos = currentScrollPos;
+}

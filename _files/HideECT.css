@@ -1,0 +1,15 @@
+﻿.HideField{
+    display: none !important;
+    
+}
+
+.ECT_FeedbackContainer .FeedbackMessage {
+    right: 100px !important;    
+}
+
+.ECT_FeedbackContainer .FeedbackInitial {
+    right: 100px !important;
+}
+.ECT_FeedbackContainer .FeedbackBox {
+    right: 100px !important;
+}

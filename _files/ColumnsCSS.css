@@ -1,0 +1,1558 @@
+﻿/*  Responsive rules
+    Due to the requirement of having good previews,
+    the css had to be complicated. This allowed on
+    the other hand to have a demo effect of the
+    responsive. Above the rules, it's possible to
+    see (and easier to understand) the orignal rules.
+*/
+
+/*
+    0.  Generic Rules
+    1.  Columns2
+    2.  Columns3
+    3.  Columns4
+    4.  Columns5
+    5.  Columns6
+    6.  MediumLeftColumn
+    7.  SmallLeftColumn
+    8.  MediumRightColumn
+    9.  SmallRightColumn
+*/
+
+/*-------------------------------------*\
+            $0. Generic Rules
+\*-------------------------------------*/
+
+.Columns {
+    width: 100%;
+}
+
+.Columns.MarginBottom {
+    margin-bottom: 20px;
+}
+
+.Columns .Column {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+    vertical-align: top;
+}
+
+.Columns .Column > div {
+    width: 100%;
+}
+
+.Columns .Columns .Column {
+    margin-bottom: 10px;
+}
+
+/* Gutter option */
+.Columns.NoGutter > .Column,
+.Columns.NoGutter > .Column.ColFirst,
+.Columns.NoGutter > .Column.ColLast {
+   padding: 0px!important;
+}
+
+/* Border option */
+.Columns.Border .Column > div{    
+   padding: 10px;
+   border: solid 1px #CCC;
+}
+
+/* BreakFirst, BreakLast, BreakAll, BreakMiddle */
+.tablet .Columns.MarginBottom.tab_BreakFirst,
+.tablet .Columns.MarginBottom.tab_BreakLast,
+.tablet .Columns.MarginBottom.tab_BreakAll,
+.tablet .Columns.MarginBottom.tab_BreakMiddle,
+.phone .Columns.MarginBottom.mob_BreakFirst,
+.phone .Columns.MarginBottom.mob_BreakLast,
+.phone .Columns.MarginBottom.mob_BreakAll,
+.phone .Columns.MarginBottom.mob_BreakMiddle {
+    margin-bottom: 10px;
+}
+
+/* MarginBottom Columns -> BreakFirst, BreakLast, BreakAll, BreakMiddle */
+.tablet .Columns.MarginBottom.tab_BreakFirst > .Column,
+.tablet .Columns.MarginBottom.tab_BreakLast > .Column,
+.tablet .Columns.MarginBottom.tab_BreakAll > .Column,
+.tablet .Columns.MarginBottom.tab_BreakMiddle > .Column,
+.phone .Columns.MarginBottom.mob_BreakFirst > .Column,
+.phone .Columns.MarginBottom.mob_BreakLast > .Column,
+.phone .Columns.MarginBottom.mob_BreakAll > .Column,
+.phone .Columns.MarginBottom.mob_BreakMiddle > .Column {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/*-------------------------------------*\
+            $1. Columns2
+\*-------------------------------------*/
+
+.Columns2 > .Column {
+    width: 50%;
+    padding: 0 5px;
+}
+
+.Columns2 > .Column.ColFirst {
+    padding-left: 0;
+}
+
+.Columns2 > .Column.ColLast {
+    padding-right: 0;
+}
+
+.Columns2.NoGutter.Border .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+
+
+/* BreakFirst, BreakLast, BreakAll, BreakMiddle */
+.tablet .Columns2.tab_BreakFirst > .Column,
+.tablet .Columns2.tab_BreakLast > .Column,
+.tablet .Columns2.tab_BreakAll > .Column,
+.tablet .Columns2.tab_BreakMiddle > .Column,
+.phone .Columns2.mob_BreakFirst > .Column,
+.phone .Columns2.mob_BreakLast > .Column,
+.phone .Columns2.mob_BreakAll > .Column,
+.phone .Columns2.mob_BreakMiddle > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .Columns2.tab_BreakFirst > .Column.ColLast div,
+.tablet .Columns2.tab_BreakLast > .Column.ColLast div,
+.tablet .Columns2.tab_BreakAll > .Column.ColLast div,
+.tablet .Columns2.tab_BreakMiddle > .Column.ColLast div,
+.phone .Columns2.mob_BreakFirst > .Column.ColLast div,
+.phone .Columns2.mob_BreakLast > .Column.ColLast div,
+.phone .Columns2.mob_BreakAll > .Column.ColLast div,
+.phone .Columns2.mob_BreakMiddle > .Column.ColLast div{
+    border-left-width: 1px;
+}
+
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.Columns2.NoGutter.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns2.NoGutter.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns2.NoGutter.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns2.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns2.NoGutter.MarginBottom.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.MarginBottom.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.Columns2.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.MarginBottom.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.Columns2.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.Columns2.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns2.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+
+/*-------------------------------------*\
+            $2. Columns3
+\*-------------------------------------*/
+
+.Columns3 > .Column {
+    width: 33.333%;
+    padding: 0 3.333px;
+}
+
+.Columns3 .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 6.666px;
+}
+
+.Columns3.NoGutter.Border .Column.ColFirst > div{
+    border-right-width: 0;
+}
+
+.Columns3.NoGutter.Border .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+.Columns3 .Column.ColLast {
+    padding-right: 0;
+    padding-left: 6.666px;
+}
+
+
+/* BreakAll */
+.tablet .Columns3.tab_BreakAll > .Column,
+.phone .Columns3.mob_BreakAll > .Column {
+    width: 100%;
+    padding: 0;
+}
+
+.tablet .Columns3.Border.NoGutter.tab_BreakAll > .Column.ColFirst div,
+.phone .Columns3.Border.NoGutter.mob_BreakAll > .Column.ColFirst div{
+    border-right-width: 1px;
+}
+
+.tablet .Columns3.Border.NoGutter.tab_BreakAll > .Column.ColLast div,
+.phone .Columns3.Border.NoGutter.mob_BreakAll > .Column.ColLast div{
+    border-left-width: 1px;
+}
+
+
+
+
+/* BreakFirst, BreakMiddle */
+.tablet .Columns3.tab_BreakFirst > .Column,
+.tablet .Columns3.tab_BreakMiddle > .Column,
+.phone .Columns3.mob_BreakFirst > .Column,
+.phone .Columns3.mob_BreakMiddle > .Column {
+    width: 50%;
+    padding: 0 5px 0 0;
+}
+
+.tablet .Columns3.tab_BreakFirst > .Column.ColFirst,
+.tablet .Columns3.tab_BreakMiddle > .Column.ColFirst,
+.phone .Columns3.mob_BreakFirst > .Column.ColFirst,
+.phone .Columns3.mob_BreakMiddle > .Column.ColFirst {
+    width: 100%;
+    padding: 0;
+}
+
+.tablet .Columns3.tab_BreakFirst > .Column.ColLast,
+.tablet .Columns3.tab_BreakMiddle > .Column.ColLast,
+.phone .Columns3.mob_BreakFirst > .Column.ColLast,
+.phone .Columns3.mob_BreakMiddle > .Column.ColLast {
+    padding-right: 0;
+    padding-left: 5px;
+}
+
+.tablet .Columns3.NoGutter.Border.tab_BreakMiddle .Column.ColFirst > div,
+.tablet .Columns3.NoGutter.Border.tab_BreakFirst .Column.ColFirst > div,
+.phone .Columns3.NoGutter.Border.mob_BreakMiddle .Column.ColFirst > div,
+.phone .Columns3.NoGutter.Border.mob_BreakFirst .Column.ColFirst > div{
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.tablet .Columns3.Border.NoGutter.tab_BreakMiddle .Column.ColLast > div,
+.tablet .Columns3.Border.NoGutter.tab_BreakFirst .Column.ColLast > div,
+.phone .Columns3.Border.NoGutter.mob_BreakMiddle .Column.ColLast > div,
+.phone .Columns3.Border.NoGutter.mob_BreakFirst .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+
+
+
+/* BreakLast */
+.tablet .Columns3.tab_BreakLast > .Column,
+.phone .Columns3.mob_BreakLast > .Column {
+    width: 50%;
+    padding-right: 0;
+    padding-left: 5px;
+}
+
+.tablet .Columns3.tab_BreakLast > .Column.ColFirst,
+.phone .Columns3.mob_BreakLast > .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.tablet .Columns3.tab_BreakLast > .Column.ColLast,
+.phone .Columns3.mob_BreakLast > .Column.ColLast {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+.tablet .Columns3.Border.NoGutter.tab_BreakLast .Column.ColFirst > div,
+.tablet .Columns3.Border.NoGutter.tab_BreakLast .Column.ColFirst > div,
+.phone .Columns3.Border.NoGutter.mob_BreakLast .Column.ColFirst > div,
+.phone .Columns3.Border.NoGutter.mob_Breaklast .Column.ColFirst > div{
+    border-right-width: 0px;
+}
+
+.tablet .Columns3.NoGutter.tab_BreakLast .Column.ColLast > div,
+.tablet .Columns3.NoGutter.tab_BreakLast .Column.ColLast > div,
+.phone .Columns3.NoGutter.mob_BreakLast .Column.ColLast > div,
+.phone .Columns3.NoGutter.mob_BreakLast .Column.ColLast > div{
+    border-left-width: 1px;
+}
+
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.Columns3.NoGutter.Border.tab_BreakAll  > .Column > div,
+.phone .Columns.Columns3.NoGutter.Border.mob_BreakAll  > .Column > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns3.NoGutter.Border.tab_BreakAll  > .Column.ColLast > div,
+.phone .Columns.Columns3.NoGutter.Border.mob_BreakAll  > .Column.ColLast > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.Columns3.NoGutter.MarginBottom.Border.tab_BreakAll  > .Column > div,
+.phone .Columns.Columns3.NoGutter.MarginBottom.Border.mob_BreakAll  > .Column > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.Columns3.NoGutter.Border.tab_BreakFirst  > .Column.ColFirst > div,
+.phone .Columns.Columns3.NoGutter.Border.mob_BreakFirst  > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns3.NoGutter.MarginBottom.Border.tab_BreakFirst  > .Column.ColFirst > div,
+.phone .Columns.Columns3.NoGutter.MarginBottom.Border.mob_BreakFirst  > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.Columns3.NoGutter.Border.tab_BreakLast  > .Column.ColLast > div,
+.phone .Columns.Columns3.NoGutter.Border.mob_BreakLast  > .Column.ColLast > div {
+    border-top-width: 0px;
+}
+
+.tablet .Columns.Columns3.NoGutter.MarginBottom.Border.tab_BreakLast  > .Column.ColLast > div,
+.phone .Columns.Columns3.NoGutter.MarginBottom.Border.mob_BreakLast  > .Column.ColLast > div {
+    border-top-width: 1px;
+}
+
+.tablet .Columns.Columns3.NoGutter.Border.tab_BreakMiddle  > .Column.ColFirst > div,
+.phone .Columns.Columns3.NoGutter.Border.mob_BreakMiddle  > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.Columns3.NoGutter.MarginBottom.Border.tab_BreakMiddle  > .Column.ColFirst > div,
+.phone .Columns.Columns3.NoGutter.MarginBottom.Border.mob_BreakMiddle  > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+
+
+/*-------------------------------------*\
+            $3. Columns4
+\*-------------------------------------*/
+
+.Columns4 > .Column{
+    width: 25%;
+}
+
+.Columns4 .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 7.5px;
+}
+
+.Columns4 .Column.ColLast {
+    padding-left: 7.5px;
+    padding-right: 0;
+}
+
+.Columns4 .Column.LeftMiddle {
+    padding-left: 2.5px;
+    padding-right: 5px;
+}
+
+.Columns4 .Column.RightMiddle {
+    padding-left: 5px;
+    padding-right: 2.5px;
+}
+
+.Columns4.Border.NoGutter .Column > div{
+    border-right-width: 0;
+}
+
+.Columns4.Border.NoGutter .Column.ColLast > div{
+    border-right-width: 1px;
+}
+
+
+
+
+/* BreakAll */
+.tablet .Columns4.tab_BreakAll > .Column,
+.phone .Columns4.mob_BreakAll > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .Columns4.mob_BreakAll > .Column > div,
+.phone .Columns4.tab_BreakAll > .Column > div{
+    border-right-width: 1px;
+    border-left-width: 1px;
+}
+
+
+
+
+
+/* BreakFirst */
+.tablet .Columns4.tab_BreakFirst > .Column,
+.phone .Columns4.mob_BreakFirst > .Column {
+    width: 33.333%;
+    padding-left: 3.333px;
+    padding-right: 3.333px;
+}
+
+.tablet .Columns4.tab_BreakFirst > .Column.ColFirst,
+.phone .Columns4.mob_BreakFirst > .Column.ColFirst {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .Columns4.tab_BreakFirst > .Column.LeftMiddle,
+.phone .Columns4.mob_BreakFirst > .Column.LeftMiddle {
+    padding-left: 0px;
+    padding-right: 6.666px;
+}
+
+
+.tablet .Columns4.tab_BreakFirst > .Column.ColLast,
+.phone .Columns4.mob_BreakFirst > .Column.ColLast {
+    padding-left: 6.666px;
+    padding-right: 0;
+}
+
+
+.tablet .Columns4.Border.NoGutter.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns4.Border.NoGutter.mob_BreakFirst > .Column.ColFirst > div{
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+
+
+.tablet .Columns4.Border.NoGutter.tab_BreakFirst > .Column.ColLeftLast > div,
+.phone .Columns4.Border.NoGutter.mob_BreakFirst > .Column.ColLeftLast > div{
+    border-right-width: 1px;
+}
+
+
+
+
+
+
+
+/* Break Last*/
+
+.tablet .Columns4.tab_BreakLast > .Column,
+.phone .Columns4.mob_BreakLast > .Column {
+    width: 33.333%;
+}
+
+.tablet .Columns4.tab_BreakLast > .Column.ColFirst,
+.phone .Columns4.mob_BreakLast > .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 6.666px;
+}
+
+.tablet .Columns4.tab_BreakLast > .Column.LefttMiddle,
+.phone .Columns4.mob_BreakLast > .Column.LeftMiddle {
+    padding-right: 3.333px;
+    padding-left: 3.333px;
+}
+
+.tablet .Columns4.tab_BreakLast > .Column.RightMiddle,
+.phone .Columns4.mob_BreakLast > .Column.RightMiddle {
+    padding-right: 0px;
+    padding-left: 6.666px;
+}
+
+.tablet .Columns4.tab_BreakLast > .Column.ColLast,
+.phone .Columns4.mob_BreakLast > .Column.ColLast {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+.tablet .Columns4.Border.NoGutter.tab_BreakLast > .Column.RightMiddle > div,
+.phone .Columns4.Border.NoGutter.mob_BreakLast > .Column.RightMiddle > div{
+    border-right-width: 1px;
+}
+
+
+
+
+/* BreakMiddle */
+.tablet .Columns4.tab_BreakMiddle > .Column,
+.phone .Columns4.mob_BreakMiddle > .Column {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.tablet .Columns4.tab_BreakMiddle > .Column.ColFirst,
+.phone .Columns4.mob_BreakMiddle > .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.tablet .Columns4.tab_BreakMiddle > .Column.RightMiddle,
+.phone .Columns4.mob_BreakMiddle > .Column.RightMiddle {
+    padding-left: 0;
+}
+
+.tablet .Columns4.tab_BreakMiddle > .Column.LeftMiddle,
+.phone .Columns4.mob_BreakMiddle > .Column.LeftMiddle {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.tablet .Columns4.tab_BreakMiddle > .Column.ColLast,
+.phone .Columns4.mob_BreakMiddle > .Column.ColLast {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.tablet .Columns4.Border.NoGutter.tab_BreakMiddle > .Column.LeftMiddle > div,
+.phone .Columns4.Border.NoGutter.mob_BreakMiddle > .Column.LeftMiddle > div{
+    border-right-width: 1px;
+}
+
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_DontBreak > .Column > div,
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.LeftMiddle > div,
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.RightMiddle > div,
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.LeftMiddle > div,
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColFirst > div,
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakMiddle  > .Column.ColFirst > div,
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakMiddle  > .Column.RightMiddle > div,
+.tablet .Columns.Columns4.NoGutter.Border.tab_DontBreak > .Column > div,
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakFirst  > .Column.LeftMiddle > div,
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakFirst  > .Column.RightMiddle > div,
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakLast  > .Column > div  {
+    border-right-width: 0px;
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakLast  > .Column.RightMiddle > div,
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakLast  > .Column.ColLast > div {
+    border-right-width: 1px
+}
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_DontBreak > .Column.ColLast > div,
+.tablet .Columns.Columns4.NoGutter.Border.tab_DontBreak > .Column.ColLast > div {
+    border-right-width: 1px;
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakAll  > .Column > div {
+    border-bottom-width: 0px
+}
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakAll  > .Column > div {
+    border-bottom-width: 1px
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakAll  > .Column.ColLast > div {
+    border-bottom-width: 1px
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakFirst  > .Column.ColFirst > div {
+    border-bottom-width: 0px
+}
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakFirst  > .Column.ColFirst > div {
+    border-bottom-width: 1px
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakLast  > .Column.ColLast > div {
+    border-top-width: 0px;
+}
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakLast  > .Column.ColLast > div {
+    border-top-width: 1px;
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakMiddle  > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+    border-right-width: 0px
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakMiddle  > .Column.LeftMiddle > div {
+    border-bottom-width: 0px
+}
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakMiddle  > .Column.LeftMiddle > div {
+    border-bottom-width: 1px
+}
+
+.tablet .Columns.Columns4.NoGutter.MarginBottom.Border.tab_BreakMiddle  > .Column.ColFirst > div {
+    border-bottom-width: 1px
+}
+
+.tablet .Columns.Columns4.NoGutter.Border.tab_BreakMiddle  > .Column.RightMiddle > div {
+    border-right-width: 0px
+}
+
+.phone .Columns.Columns4.NoGutter.Border.mob_BreakAll  > .Column > div {
+    border-right-width: 1px;
+    border-bottom-width: 0px;
+}
+
+.phone .Columns.Columns4.NoGutter.Border.mob_BreakAll  > .Column.ColLast > div {
+    border-bottom-width: 1px;
+}
+
+.phone .Columns.Columns4.NoGutter.MarginBottom.Border.mob_BreakAll  > .Column > div {
+    border-bottom-width: 1px;
+}
+
+.phone .Columns.Columns4.NoGutter.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.phone .Columns.Columns4.NoGutter.Border.mob_BreakLast > .Column.ColLast > div {
+    border-top-width: 0px;
+}
+
+.phone .Columns.Columns4.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns4.NoGutter.Border.mob_BreakMiddle > .Column.LeftMiddle > div {
+    border-bottom-width: 0px;
+}
+
+.phone .Columns.Columns4.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns4.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.LeftMiddle > div {
+    border-bottom-width: 1px;
+}
+
+.phone .Columns.Columns4.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColLast > div {
+    border-top-width: 1px;
+}
+
+.phone .Columns.Columns4.NoGutter.MarginBottom.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+
+
+
+
+/*-------------------------------------*\
+            $4. Columns5
+\*-------------------------------------*/
+
+.Columns5 >.Column {
+    width: 20%;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.Columns5 .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+.Columns5 .Column.ColLast {
+    padding-left: 8px;
+    padding-right: 0;
+}
+
+.Columns5 .Column.LeftMiddle {
+    padding-left: 2px;
+    padding-right: 6px;
+}
+
+.Columns5 .Column.RightMiddle {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+
+
+.Columns5.Border.NoGutter .Column > div{
+    border-right-width: 0;
+}
+
+.Columns5.Border.NoGutter .Column.ColLast > div{
+    border-right-width: 1px;
+}
+
+
+
+
+/* Break All*/
+.tablet .Columns5.tab_BreakAll > .Column,
+.phone .Columns5.mob_BreakAll > .Column {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+}
+
+.tablet .Columns5.tab_BreakAll > .Column > div,
+.phone .Columns5.mob_BreakAll > .Column > div{
+    border-right-width: 1px;
+}
+
+
+
+
+
+
+/* Break First */
+.tablet .Columns5.tab_BreakFirst > .Column,
+.phone .Columns5.mob_BreakFirst > .Column {
+    width: 25%;
+    padding-left: 2.5px;
+    padding-right: 5px;
+}
+
+
+.tablet .Columns5.tab_BreakFirst > .Column.ColFirst,
+.phone .Columns5.mob_BreakFirst > .Column.ColFirst {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.tablet .Columns5.tab_BreakFirst > .Column.LeftMiddle,
+.phone .Columns5.mob_BreakFirst > .Column.LeftMiddle {
+    padding-left: 0;
+    padding-right: 7.5px;
+}
+
+.tablet .Columns5.tab_BreakFirst > .Column.RightMiddle,
+.phone .Columns5.mob_BreakFirst > .Column.RightMiddle {
+    padding-left: 5px;
+    padding-right: 2.5px;
+}
+
+
+.tablet .Columns5.tab_BreakFirst > .Column.ColLast,
+.phone .Columns5.mob_BreakFirst > .Column.ColLast {
+    padding-left: 7.5px;
+    padding-right: 0;
+}
+
+
+.tablet .Columns5.Border.NoGutter.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns5.Border.NoGutter.mob_BreakFirst > .Column.ColFirst > div{
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+
+
+
+
+
+
+/* BreakLast */
+.tablet .Columns5.tab_BreakLast > .Column,
+.phone .Columns5.mob_BreakLast > .Column {
+    width: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tablet .Columns5.tab_BreakLast > .Column.ColFirst,
+.phone .Columns5.mob_BreakLast > .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.tablet .Columns5.tab_BreakLast > .Column.RightMiddle,
+.phone .Columns5.mob_BreakLast > .Column.RightMiddle {
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+.tablet .Columns5.tab_BreakLast > .Column.ColLast,
+.phone .Columns5.mob_BreakLast > .Column.ColLast {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.tablet .Columns5.Border.NoGutter.tab_BreakLast > .Column.RightMiddle > div,
+.phone .Columns5.Border.NoGutter.mob_BreakLast > .Column.RightMiddle > div{
+    border-right-width: 1px;
+}
+
+
+
+
+
+/* BreakMiddle */
+.tablet .Columns5.tab_BreakMiddle > .Column,
+.phone .Columns5.mob_BreakMiddle > .Column {
+    padding-left: 0px;
+    padding-right: 5px;
+    width: 33.333%;
+}
+
+.tablet .Columns5.tab_BreakMiddle > .Column.ColFirst,
+.phone .Columns5.mob_BreakMiddle > .Column.ColFirst {
+    padding-left: 0px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.tablet .Columns5.tab_BreakMiddle > .Column.LeftMiddle,
+.phone .Columns5.mob_BreakMiddle > .Column.LeftMiddle {
+    width: 50%;
+    padding-right: 0;
+    padding-left: 5px;
+}
+
+.tablet .Columns5.tab_BreakMiddle > .Column.RightMiddle,
+.phone .Columns5.mob_BreakMiddle > .Column.RightMiddle {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+.tablet .Columns5.tab_BreakMiddle > .Column.ColLast,
+.phone .Columns5.mob_BreakMiddle > .Column.ColLast {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+
+
+.tablet .Columns5.Border.NoGutter.tab_BreakMiddle > .Column.LeftMiddle > div,
+.phone .Columns5.Border.NoGutter.mob_BreakMiddle > .Column.LeftMiddle > div{
+    border-right-width: 1px;
+}
+
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.Columns5.NoGutter.Border.tab_BreakFirst  > .Column.ColFirst > div,
+.phone .Columns.Columns5.NoGutter.Border.mob_BreakFirst  > .Column.ColFirst > div  {
+  border-bottom-width: 0; 
+}
+
+.tablet .Columns.Columns5.NoGutter.MarginBottom.Border.tab_BreakFirst  > .Column.ColFirst > div,
+.phone .Columns.Columns5.NoGutter.MarginBottom.Border.mob_BreakFirst  > .Column.ColFirst > div  {
+  border-bottom-width: 1px; 
+}
+
+
+.tablet .Columns.Columns5.NoGutter.Border.tab_BreakLast > .Column.ColLast > div,
+.phone .Columns.Columns5.NoGutter.Border.mob_BreakLast > .Column.ColLast > div  {
+  border-top-width: 0px; 
+}
+
+.tablet .Columns.Columns5.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColLast > div,
+.phone .Columns.Columns5.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColLast > div  {
+  border-top-width: 1px; 
+}
+
+.tablet .Columns.Columns5.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.tablet .Columns.Columns5.NoGutter.Border.tab_BreakMiddle > .Column.LeftMiddle > div,
+.phone .Columns.Columns5.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns5.NoGutter.Border.mob_BreakMiddle > .Column.LeftMiddle > div {
+  border-bottom-width: 0px;   
+}
+
+.tablet .Columns.Columns5.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.tablet .Columns.Columns5.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.LeftMiddle > div,
+.phone .Columns.Columns5.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns5.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.LeftMiddle > div {
+  border-bottom-width: 1px;   
+}
+
+
+
+/*-------------------------------------*\
+            $5. Columns6
+\*-------------------------------------*/
+
+.Columns6 > .Column {
+    width: 16.666%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.Columns6 .Column.ColFirst {
+    padding-left: 0px;
+    padding-right: 8.333px;
+}
+
+.Columns6 .Column.LeftMiddle {
+    padding-left: 1.777px;
+    padding-right: 6.556px;
+}
+
+.Columns6 > .Column.Col3rd{
+    padding-left: 3.444px;
+    padding-right: 4.889px;
+}
+
+.Columns6 > .Column.Col4th{
+    padding-left: 5.111px;
+    padding-right: 3.222px;
+}
+
+.Columns6 .Column.RightMiddle {
+    padding-left: 6.778px;
+    padding-right: 1.555px;
+}
+
+.Columns6 .Column.ColLast {
+    padding-left: 8.444px;
+    padding-right: 0;
+}
+
+
+.Columns6.Border.NoGutter .Column > div{
+    border-right-width: 0;
+}
+
+.Columns6.Border.NoGutter .Column.ColLast > div{
+    border-right-width: 1px;
+}
+
+
+
+
+/* BreakAll */
+.tablet .Columns6.tab_BreakAll > .Column,
+.phone .Columns6.mob_BreakAll > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .Columns6.tab_BreakAll > .Column > div,
+.phone .Columns6.mob_BreakAll > .Column > div{
+    border-right-width: 1px;
+}
+
+
+
+
+/* Break First */
+.tablet .Columns6.tab_BreakFirst > .Column,
+.phone .Columns6.mob_BreakFirst > .Column {
+    width: 20%;
+}
+
+
+.tablet .Columns6.tab_BreakFirst > .Column.ColFirst,
+.phone .Columns6.mob_BreakFirst > .Column.ColFirst {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .Columns6.tab_BreakFirst > .Column.LeftMiddle,
+.phone .Columns6.mob_BreakFirst > .Column.LeftMiddle {
+    padding-left: 0px;
+    padding-right: 8px;
+}
+
+.tablet .Columns6.tab_BreakFirst > .Column.Col3rd,
+.phone .Columns6.mob_BreakFirst > .Column.Col3rd {
+    padding-left: 2px;
+    padding-right: 6px;
+}
+
+.tablet .Columns6.tab_BreakFirst > .Column.Col4th,
+.phone .Columns6.mob_BreakFirst > .Column.Col4th {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+.tablet .Columns6.tab_BreakFirst > .Column.RightMiddle,
+.phone .Columns6.mob_BreakFirst > .Column.RightMiddle {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+.tablet .Columns6.tab_BreakFirst > .Column.ColLast,
+.phone .Columns6.mob_BreakFirst > .Column.ColLast {
+    padding-left: 8px;
+    padding-right: 0;
+}
+
+.tablet .Columns6.Border.NoGutter.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns6.Border.NoGutter.mob_BreakFirst > .Column.ColFirst > div{
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+
+
+
+
+
+/* Break Last */
+.tablet .Columns6.tab_BreakLast > .Column,
+.phone .Columns6.mob_BreakLast > .Column {
+    width: 20%;
+}
+
+
+.tablet .Columns6.tab_BreakLast > .Column.ColFirst,
+.phone .Columns6.mob_BreakLast > .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+.tablet .Columns6.tab_BreakLast > .Column.LeftMiddle,
+.phone .Columns6.mob_BreakLast > .Column.LeftMiddle {
+    padding-left: 2px;
+    padding-right: 6px;
+}
+
+.tablet .Columns6.tab_BreakLast > .Column.Col3rd,
+.phone .Columns6.mob_Breaklast > .Column.Col3rd {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.tablet .Columns6.tab_Breaklast > .Column.Col4th,
+.phone .Columns6.mob_BreakLast > .Column.Col4th {
+    padding-left: 6px;
+    padding-right: 2px;
+}
+
+
+.tablet .Columns6.tab_BreakLast > .Column.RightMiddle,
+.phone .Columns6.mob_BreakLast > .Column.RightMiddle {
+    padding-left: 8px;
+    padding-right: 0px;
+}
+
+.tablet .Columns6.tab_BreakLast > .Column.ColLast,
+.phone .Columns6.mob_BreakLast > .Column.ColLast {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+.tablet .Columns6.Border.NoGutter.tab_BreakLast > .Column.RightMiddle > div,
+.phone .Columns6.Border.NoGutter.mob_BreakLast > .Column.RightMiddle > div{
+    border-right-width: 1px;
+}
+
+
+
+
+
+
+
+/* BreakMiddle */
+.tablet .Columns6.tab_BreakMiddle > .Column,
+.phone .Columns6.mob_BreakMiddle > .Column {
+    padding: 0 3.333px;
+    width: 33.333%;
+}
+
+.tablet .Columns6.tab_BreakMiddle > .Column.ColFirst,
+.phone .Columns6.mob_BreakMiddle > .Column.ColFirst {
+    padding-left: 0;
+    padding-right: 6.666px;
+}
+
+.tablet .Columns6.tab_BreakMiddle > .Column.Col3rd,
+.phone .Columns6.mob_BreakMiddle > .Column.Col3rd {
+    padding-left: 6.666px;
+    padding-right: 0;
+}
+
+.tablet .Columns6.tab_BreakMiddle > .Column.Col4th,
+.phone .Columns6.mob_BreakMiddle > .Column.Col4th {
+    padding-right: 6.666px;
+    padding-left: 0;
+}
+
+
+.tablet .Columns6.tab_BreakMiddle > .Column.ColLast,
+.phone .Columns6.mob_BreakMiddle > .Column.ColLast {
+    padding-right: 0px;
+    padding-left: 6.666px;
+}
+
+.tablet .Columns6.Border.NoGutter.tab_BreakMiddle > .Column.Col3rd > div,
+.phone .Columns6.Border.NoGutter.mob_BreakMiddle > .Column.Col3rd > div{
+    border-right-width: 1px;
+}
+
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakAll > .Column.ColFirst > div {
+  border-top-width: 1px;   
+}
+
+
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakAll > .Column > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakAll > .Column > div  {
+  border-top-width: 0px;   
+}
+
+.tablet .Columns.Columns6.NoGutter.MarginBottom.Border.tab_BreakAll > .Column > div,
+.phone .Columns.Columns6.NoGutter.MarginBottom.Border.mob_BreakAll > .Column > div {
+  border-top-width: 1px;   
+}
+
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakFirst  > .Column.ColFirst > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakFirst  > .Column.ColFirst > div  {
+  border-bottom-width: 0; 
+}
+
+.tablet .Columns.Columns6.NoGutter.MarginBottom.Border.tab_BreakFirst  > .Column.ColFirst > div,
+.phone .Columns.Columns6.NoGutter.MarginBottom.Border.mob_BreakFirst  > .Column.ColFirst > div  {
+  border-bottom-width: 1px; 
+}
+
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakLast  > .Column.ColLast > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakLast  > .Column.ColLast > div {
+  border-top-width: 0; 
+}
+
+.tablet .Columns.Columns6.NoGutter.MarginBottom.Border.tab_BreakLast  > .Column.ColLast > div,
+.phone .Columns.Columns6.NoGutter.MarginBottom.Border.mob_BreakLast  > .Column.ColLast > div {
+  border-top-width: 1px; 
+}
+
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakMiddle > .Column.LeftMiddle > div,
+.tablet .Columns.Columns6.NoGutter.Border.tab_BreakMiddle > .Column.Col3rd > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakMiddle > .Column.LeftMiddle > div,
+.phone .Columns.Columns6.NoGutter.Border.mob_BreakMiddle > .Column.Col3rd > div {
+  border-bottom-width: 0px;   
+}
+
+.tablet .Columns.Columns6.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.tablet .Columns.Columns6.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.LeftMiddle > div,
+.tablet .Columns.Columns6.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.Col3rd > div,
+.phone .Columns.Columns6.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.Columns6.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.LeftMiddle > div,
+.phone .Columns.Columns6.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.Col3rd > div {
+  border-bottom-width: 1px;   
+}
+
+
+/*-------------------------------------*\
+            $6. MediumLeftColumn
+\*-------------------------------------*/
+
+.MediumLeftColumns > .Column.ColFirst {
+    width: 35%;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
+.MediumLeftColumns > .Column.ColLast {
+    width: 65%;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.MediumLeftColumns.NoGutter.Border .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+
+
+
+/* BreakFirst BreakLast BreakAll BreakMiddle */
+.tablet .MediumLeftColumns.tab_BreakFirst > .Column,
+.tablet .MediumLeftColumns.tab_BreakLast > .Column,
+.tablet .MediumLeftColumns.tab_BreakAll > .Column,
+.tablet .MediumLeftColumns.tab_BreakMiddle > .Column,
+.phone .MediumLeftColumns.mob_BreakFirst > .Column,
+.phone .MediumLeftColumns.mob_BreakLast > .Column,
+.phone .MediumLeftColumns.mob_BreakAll > .Column,
+.phone .MediumLeftColumns.mob_BreakMiddle > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .MediumLeftColumns.NoGutter.Borders.tab_BreakFirst > .Column > div,
+.tablet .MediumLeftColumns.NoGutter.Border.tab_BreakLast > .Column > div,
+.tablet .MediumLeftColumns.NoGutter.Border.tab_BreakAll > .Column > div,
+.tablet .MediumLeftColumns.NoGutter.Border.tab_BreakMiddle > .Column > div,
+.phone .MediumLeftColumns.NoGutter.Border.mob_BreakFirst > .Column > div,
+.phone .MediumLeftColumns.NoGutter.Border.mob_BreakLast > .Column > div,
+.phone .MediumLeftColumns.NoGutter.Border.mob_BreakAll > .Column > div,
+.phone .MediumLeftColumns.NoGutter.Border.mob_BreakMiddle > .Column > div {
+    border-left-width: 1px;
+}
+
+
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.MediumLeftColumns.NoGutter.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.MediumLeftColumns.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+
+.tablet .Columns.MediumLeftColumns.NoGutter.Border.tab_BreakFirst > .Column.ColLast > div {
+    border-left-width: 1px
+}
+
+
+
+/*-------------------------------------*\
+            $7. SmallLeftColumn
+\*-------------------------------------*/
+
+.SmallLeftColumns > .Column.ColFirst {
+    width: 20%;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
+.SmallLeftColumns > .Column.ColLast {
+    width: 80%;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.SmallLeftColumns.NoGutter.Border .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+
+/* BreakFirst BreakLast BreakAll BreakMiddle */
+.tablet .SmallLeftColumns.tab_BreakFirst > .Column,
+.tablet .SmallLeftColumns.tab_BreakLast > .Column,
+.tablet .SmallLeftColumns.tab_BreakAll > .Column,
+.tablet .SmallLeftColumns.tab_BreakMiddle > .Column,
+.phone .SmallLeftColumns.mob_BreakFirst > .Column,
+.phone .SmallLeftColumns.mob_BreakLast > .Column,
+.phone .SmallLeftColumns.mob_BreakAll > .Column,
+.phone .SmallLeftColumns.mob_BreakMiddle > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.tablet .SmallLeftColumns.NoGutter.Borders.tab_BreakFirst > .Column > div,
+.tablet .SmallLeftColumns.NoGutter.Border.tab_BreakLast > .Column > div,
+.tablet .SmallLeftColumns.NoGutter.Border.tab_BreakAll > .Column > div,
+.tablet .SmallLeftColumns.NoGutter.Border.tab_BreakMiddle > .Column > div,
+.phone .SmallLeftColumns.NoGutter.Border.mob_BreakFirst > .Column > div,
+.phone .SmallLeftColumns.NoGutter.Border.mob_BreakLast > .Column > div,
+.phone .SmallLeftColumns.NoGutter.Border.mob_BreakAll > .Column > div,
+.phone .SmallLeftColumns.NoGutter.Border.mob_BreakMiddle > .Column > div {
+    border-left-width: 1px;
+}
+
+/* Use Border / No Gutter / No Margin */
+
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakFirst > .Column.ColLast > div {
+    border-left-width: 1px
+}
+
+
+/*-------------------------------------*\
+            $8. MediumRightColumn
+\*-------------------------------------*/
+
+.MediumRightColumns > .Column.ColFirst {
+    width: 65%;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
+.MediumRightColumns > .Column.ColLast {
+    width: 35%;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+
+.MediumRightColumns.NoGutter.Border .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+/* BreakFirst BreakLast BreakAll BreakMiddle */
+.tablet .MediumRightColumns.tab_BreakFirst > .Column,
+.tablet .MediumRightColumns.tab_BreakLast > .Column,
+.tablet .MediumRightColumns.tab_BreakAll > .Column,
+.phone .MediumRightColumns.mob_BreakFirst > .Column,
+.phone .MediumRightColumns.mob_BreakLast > .Column,
+.phone .MediumRightColumns.mob_BreakAll > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Use Border / No Gutter / No Margin */
+
+.tablet .MediumRightColumns.NoGutter.Borders.tab_BreakFirst > .Column > div,
+.tablet .MediumRightColumns.NoGutter.Border.tab_BreakLast > .Column > div,
+.tablet .MediumRightColumns.NoGutter.Border.tab_BreakAll > .Column > div,
+.tablet .MediumRightColumns.NoGutter.Border.tab_BreakMiddle > .Column > div,
+.phone .MediumRightColumns.NoGutter.Border.mob_BreakFirst > .Column > div,
+.phone .MediumRightColumns.NoGutter.Border.mob_BreakLast > .Column > div,
+.phone .MediumRightColumns.NoGutter.Border.mob_BreakAll > .Column > div,
+.phone .MediumRightColumns.NoGutter.Border.mob_BreakMiddle > .Column > div {
+    border-left-width: 1px;
+}
+
+
+.tablet .Columns.MediumRightColumns.tab_BreakMiddle > .Column,
+.phone .Columns.MediumRightColumns.mob_BreakMiddle > .Column {
+    width: 100%;
+    padding: 0;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.MediumRightColumns.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+
+.tablet .Columns.MediumRightColumns.NoGutter.Border.tab_BreakFirst > .Column.ColLast > div {
+    border-left-width: 1px
+}
+
+
+/*-------------------------------------*\
+            $9. SmallLeftColumn
+\*-------------------------------------*/
+
+.SmallRightColumns > .Column.ColFirst {
+    width: 80%;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+
+.SmallRightColumns > .Column.ColLast {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.SmallRightColumns.NoGutter.Border .Column.ColLast > div{
+    border-left-width: 0;
+}
+
+
+/* BreakFirst BreakLast BreakAll BreakMiddle */
+.tablet .SmallRightColumns.tab_BreakFirst > .Column,
+.tablet .SmallRightColumns.tab_BreakLast > .Column,
+.tablet .SmallRightColumns.tab_BreakAll > .Column,
+.tablet .SmallRightColumns.tab_BreakMiddle > .Column,
+.phone .SmallRightColumns.mob_BreakFirst > .Column,
+.phone .SmallRightColumns.mob_BreakLast > .Column,
+.phone .SmallRightColumns.mob_BreakAll > .Column,
+.phone .SmallRightColumns.mob_BreakMiddle > .Column {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.tablet .SmallRightColumns.NoGutter.Borders.tab_BreakFirst > .Column > div,
+.tablet .SmallRightColumns.NoGutter.Border.tab_BreakLast > .Column > div,
+.tablet .SmallRightColumns.NoGutter.Border.tab_BreakAll > .Column > div,
+.tablet .SmallRightColumns.NoGutter.Border.tab_BreakMiddle > .Column > div,
+.phone .SmallRightColumns.NoGutter.Border.mob_BreakFirst > .Column > div,
+.phone .SmallRightColumns.NoGutter.Border.mob_BreakLast > .Column > div,
+.phone .SmallRightColumns.NoGutter.Border.mob_BreakAll > .Column > div,
+.phone .SmallRightColumns.NoGutter.Border.mob_BreakMiddle > .Column > div {
+    border-left-width: 1px;
+}
+
+
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 0px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakAll > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakAll > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakFirst > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakFirst > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakLast > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakLast > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.tab_BreakMiddle > .Column.ColFirst > div,
+.phone .Columns.SmallLeftColumns.NoGutter.MarginBottom.Border.mob_BreakMiddle > .Column.ColFirst > div {
+    border-bottom-width: 1px;
+}
+
+.tablet .Columns.SmallLeftColumns.NoGutter.Border.tab_BreakFirst > .Column.ColLast > div {
+    border-left-width: 1px
+}
+
+/* ExcludeAllFromPickersOutsideBlock */

@@ -1,0 +1,20 @@
+﻿body, form, .Page {
+    height: auto !important;
+    width: 100%
+}
+body {
+ font-size: 13px;
+  color: #333;
+  background-color: #fff;
+}
+
+body.ar-AE {
+  margin: 0;
+  direction: rtl;
+}
+.Content {
+    background: #FFFFFF !important;
+    margin-top: 160px;
+    padding: 0px;
+    border-top: 1px solid #dbdcdd;
+}

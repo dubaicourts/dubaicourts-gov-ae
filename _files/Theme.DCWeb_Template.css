@@ -1,0 +1,488 @@
+﻿@import url("/LiverpoolTheme/Theme.LiverpoolTheme.css?8015");
+
+@import url("css/bootstrap-rtl.css?18491");
+@import url("css/style-rtl.css?18491");
+@import url("fontawesome/css/regular.min.css?18491");
+@import url("fontawesome/css/solid.min.css?18491");
+@import url("fontawesome/css/brands.min.css?18491");
+@import url("fontawesome/css/v4-shims.min.css?18491");
+@import url("fontawesome/css/fontawesome.min.css?18491");
+
+
+/*Added by Mariam Nufal on 2,8,2017*/
+.padded-gallery-item
+{
+    padding:5px;
+}
+
+/*Added by Mariam Nufal on 7,9,2017
+to be used instead of the gallery pattern which conflicts with the new version of jquery*/
+.gallery-element
+{ width: 33%;
+    /* float: left; */
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    vertical-align:middle;
+}
+
+.phone .gallery-element
+{
+    width: 100%;
+    padding: 5px;
+}
+
+
+.tablet .gallery-element
+{ width: 50%;
+    /* float: left; */
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    vertical-align:middle;
+}
+
+/*Added by Mariam Nufal on 5,10,2017
+to be used instead of the gallery pattern which conflicts with the new version of jquery*/
+.gallery-element-2columns
+{ width: 50%;
+    /* float: left; */
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    vertical-align:middle;
+}
+
+.phone .gallery-element-2columns
+{
+    width: 100%;
+    padding: 5px;
+}
+
+
+/*News page, added by Mariam Nufal*/
+.phone .news_image
+{
+    width:100%;
+     padding:5px;
+}
+.news_image
+{
+   padding:5px;
+   border:1px solid #ddd; /*on 3,10,2017*/
+}
+  
+  /* added by anu to handle the arrow of previous and next button on 30-9-2017*/
+    /*Modified by Shawky 06-02-2018*/
+
+ .ar-AE .ListNavigation_Previous::before, .ListNavigation_DisabledPrevious::before {
+    content: "\f061";
+    font-family: FontAwesome;
+    margin: 5px; /*Modified by Shawky*/
+}
+
+.ListNavigation_Previous::before, .ListNavigation_DisabledPrevious::before {
+    content: "\f060";
+    font-family: FontAwesome;
+    margin: 5px;  /*Modified by Shawky*/
+}
+
+.ar-AE .ListNavigation_Next::after, .ListNavigation_DisabledNext::after {
+    content: "\f060";
+    font-family: FontAwesome;
+    margin: 5px; /*Modified by Shawky*/
+}  
+
+.ListNavigation_Previous::before, .ListNavigation_DisabledPrevious::before {
+    content: "\f060";
+    font-family: FontAwesome;
+    margin: 5px;  /*Modified by Shawky*/
+}
+
+.ListNavigation_Next::after, .ListNavigation_DisabledNext::after {
+    content: "\f061";
+    font-family: FontAwesome;
+    margin: 5px;  /*Modified by Shawky*/
+}
+
+/*added by anu on 30-9-2017 to handle arabic drop down arrow*/
+
+.ar-AE .Form select.ReadOnly,.ar  select {
+    background-position: left center;
+}
+.Form select.ReadOnly, .en select {
+    background-position: right center;
+}
+
+/*added by Mariam Nufal on 4,2,2018 for the table that is displayed as list*/
+.table-displayed-aslist .TableRecords{
+    border: none ;
+    border-bottom: none;
+    padding: 5px 0px 0px 0px;
+   
+}
+.table-displayed-aslist .TableRecords_EvenLine
+{
+    border: none ;
+    border-top: none !important;
+}
+.table-displayed-aslist .TableRecords_OddLine
+{
+    border: none ;
+     border-top: none !important;
+}
+
+.table-displayed-aslist .TableRecords_Header {
+    color: #999;
+    border-bottom: 0px solid #C2C2C2;
+    padding: 0px 0px 0px 0px;
+        padding-right: 0px;
+        padding-left: 10px;
+}
+.table-displayed-aslist th
+{
+    border:none !important;
+}
+/****************************/
+/*added by Mariam Nufal on 5,2,2018 to make the search look nice in mobile*/
+.phone .responsive-search .Button
+{
+    width:100%;
+    display:block;
+    margin-top:10px;
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+.phone .responsive-search input
+{
+    width:100%;
+}
+
+/****************************/
+
+
+/**** Subscibed Services style*****/
+
+.desktop .SSsectionContainer .SectionExpandable_header
+{
+    display:none;
+}
+
+.desktop .SSsectionContainer .SectionExpandable_content
+{
+    padding-top:0px !important;
+}
+
+.phone .SSsectionContainer .SectionExpandable_content
+{
+    padding:0px !important;
+    margin-top:5px;
+}
+
+.tablet .SSsectionContainer .SectionExpandable_content
+{
+    padding:0px !important;
+    margin-top:5px;
+}
+
+.SSMenuLink
+{
+    padding-top:0px;
+    padding-bottom:6px;
+    padding-right:10px;
+    padding-left:10px;
+}
+
+
+.SSexpandable-links
+{
+    
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.tablet .SSexpandable-links
+{
+  
+padding: 16px 0 0 0;}
+
+.phone .SSexpandable-links
+{
+  
+padding: 16px 0 0 0;}
+.desktop .SSexpandable-links
+{
+  
+padding: 5px 0 0 0;}
+
+.SSexpandable-links a
+{
+    color: #3B3B3B;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+.SSexpandable-links .DisabledLink
+{
+    color: #9a9a9a;
+    margin: 0 8px;
+    font-weight: bold;
+}
+/*********************************/
+
+  .Highlight {
+        background-color:yellow;
+    }
+    
+    
+/*************added on 30,05,2018 by mariam nufal***************/
+
+
+.phone .search-component
+{
+    width:100%;
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+
+
+.phone .search-reset-button
+{
+    margin-left:0px !important;
+    margin-top:5px;
+}
+
+
+.ar-AE .desktop .search-reset-button{
+    margin-right: 10px;
+    margin-left:0px !important;
+}
+
+.ar-AE .tablet .search-reset-button {
+    margin-right: 10px;
+    margin-left:0px !important;
+}
+
+.phone .chart-outer-container
+{
+    width:100%;
+}
+
+/***********************************/
+.one-line-text 
+{
+    white-space: nowrap;
+}
+.copyrights {direction:ltr}
+
+.phone .full-width-phone 
+{
+    width:100%;
+}
+
+
+/***************/
+
+.Form label {
+    color: #333;
+}
+
+.as-form-label {
+    /* color: #999; */
+    font-weight: 600;
+}
+/***************/
+
+.phone .responsive-form input 
+{
+    width:100%;
+      margin-left:0px !important;
+    margin-right:0px !important;
+}
+
+.phone .responsive-form label
+{
+    width:100%;
+}
+.phone .responsive-form select
+{
+    width:100%;
+      margin-left:0px !important;
+    margin-right:0px !important;
+}
+.phone .responsive-form textarea
+{
+    width:100%;
+      margin-left:0px !important;
+    margin-right:0px !important;
+}
+.phone .responsive-form .Button
+{
+    width:100%;
+    display:block;
+    margin-top:10px;
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+
+
+.checkbox-radio-button
+{
+    width:20px !important;
+}
+
+/*******HR Forms********/
+
+.phone .checkbox-label
+{
+    width: 75% !important;
+}
+
+.phone .checkbox-container
+{
+    width: 20% !important;
+}
+
+/***************Responsive Search Box****************/
+
+
+.en-US .desktop  .responsive-search-box .ThemeGrid_MarginGutter
+{
+    margin-left: 0.98% !important;
+}
+
+ .en-US .tablet .responsive-search-box .ThemeGrid_MarginGutter
+{
+    margin-left: 0.98% !important;
+}
+
+
+/*************************/
+
+
+ .ar-AE  .desktop .responsive-search-box .ThemeGrid_MarginGutter
+{
+    margin-right: 0.98% !important;
+    margin-left: 0px !important;
+}
+
+
+.ar-AE .tablet  .responsive-search-box .ThemeGrid_MarginGutter
+{
+    margin-right: 0.98% !important;
+    margin-left: 0px !important;
+}
+
+
+/*************************/
+
+
+.phone .responsive-search-box .ThemeGrid_MarginGutter
+{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+
+/*************************/
+
+.en-US .desktop  .responsive-search-box .Button
+{
+    margin-left: 0.98% !important;
+}
+
+
+.en-US .tablet  .responsive-search-box .Button
+{
+    margin-left: 0.98% !important;
+}
+
+
+/*************************/
+
+
+.ar-AE  .desktop .responsive-search-box .Button
+{
+    margin-right: 0.98% !important;
+    margin-left: 0px !important;
+}
+
+
+.ar-AE  .tablet .responsive-search-box .Button
+{
+    margin-right: 0.98% !important;
+    margin-left: 0px !important;
+}
+
+
+/*************************/
+
+
+
+
+.phone .responsive-search-box .Button
+{
+    margin-top: 10px !important;
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.phone .responsive-search-box input
+{
+    margin-top: 10px !important;
+    width: 100% !important;
+}
+
+.phone .responsive-search-box select
+{
+    margin-top: 10px !important;
+    width: 100% !important;
+}
+
+
+/**************************************************/
+
+.MandatoryStar:after
+{
+    content: "*";
+    color: #BF1601;
+    position: absolute;
+    padding: 0px 5px 5px 3px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Edit Records like a Form */
+table.EditRecord tr td {
+    border: 0;
+}
+.EditRecord_Caption {
+    color: #000000;
+}
+.EditRecord {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+td.EditRecord_Caption:first-child + .EditRecord_Value {
+    padding-right: 0;
+}
+table.EditRecord tr td, table.ShowRecord tr td {
+    padding-right: 10px;
+    padding-top: 0;
+}
+.EditRecord_Value,
+table.EditRecord tr td[colspan="2"] {
+    padding: 0;
+}
+td.EditRecord_Caption.MandatoryCaption:after {
+    display: none;
+}
+.EditRecord .MarginBottom {
+    margin-bottom: 30px;
+}
+.EditRecord label.MandatoryLabel:after {
+    font-size: 16px;
+    font-family: serif;
+}
